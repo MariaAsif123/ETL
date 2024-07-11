@@ -1,0 +1,18 @@
+2024-07-11 12:22:48,941 - INFO - Logging setup complete.
+2024-07-11 12:22:48,942 - INFO - Attempting to fetch data from https://web.archive.org/web/20230908091635/https:/en.wikipedia.org/wiki/List_of_largest_banks...
+2024-07-11 12:22:51,648 - INFO - Successfully fetched the webpage.
+2024-07-11 12:22:51,785 - INFO - Data extraction from Wikipedia successful.
+2024-07-11 12:22:51,796 - INFO - Data transformed into DataFrame
+2024-07-11 12:22:51,796 - INFO - Data transformation successful.
+2024-07-11 12:22:51,802 - INFO - Data transformed with exchange rates
+2024-07-11 12:22:51,804 - INFO - Data loaded to CSV file: Largest_banks.csv
+2024-07-11 12:22:51,839 - INFO - Data loaded into SQLite database: Largest_banks
+2024-07-11 12:22:51,842 - INFO - Query executed: SELECT `Bank name`,COUNT(*) as Bank_Count FROM Largest_banks WHERE `Market cap (US$ billion)` > 100
+2024-07-11 12:22:51,846 - INFO - Query executed: SELECT `Bank name`, `Market cap (GBP billion)` FROM Largest_banks WHERE `Market cap (GBP billion)` > 200
+2024-07-11 12:22:51,852 - INFO - Query executed: SELECT `Bank name`, `Market cap (INR Billion)` FROM Largest_banks ORDER BY `Market cap (INR Billion)` DESC
+2024-07-11 12:22:51,858 - INFO - Query executed: SELECT `Bank name`, `Market cap (US$ billion)` FROM Largest_banks WHERE `Market cap (US$ billion)` = (SELECT MAX(`Market cap (US$ billion)`) FROM banks)
+2024-07-11 12:22:52,255 - INFO - Data visualization created for Largest Banks by Market Cap (US$ billion)') 
+2024-07-11 12:22:52,554 - INFO - Data visualization created for Count of Banks with Market Cap Greater Than $100 Billion 
+2024-07-11 12:22:53,033 - INFO - Data visualization created for Banks with Market Cap in GBP Billion > 200 
+2024-07-11 12:22:53,622 - INFO - Data visualization created for Top Banks by Market Cap in INR Billion 
+2024-07-11 12:22:53,879 - INFO - Data visualization created for Bank with the Maximum Market Cap in US$ Billion 
